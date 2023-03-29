@@ -1,11 +1,18 @@
 <script>
+import { store } from '../store';
 export default {
-    name: 'AppCard'
+    name: 'AppCard',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
 <template>
-    card
+    <div>
+    </div>
 </template>
 
 <style scoped>

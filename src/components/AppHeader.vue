@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-    header
+        <input v-model="store.searchKey" type="text">
+        <button type="button" @click="$emit('search')">invia</button>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
