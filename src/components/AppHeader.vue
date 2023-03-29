@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-        <input v-model="store.searchKey" type="text">
+        <input @keyup="$emit('search')" v-model="store.searchKey" type="text">
         <button type="button" @click="$emit('search')">invia</button>
 </template>
 

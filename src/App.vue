@@ -16,6 +16,7 @@ export default {
   },
   methods: {
     search() {
+      // Film
       axios.get(store.config.url_movies, {
         params: {
           api_key: store.config.api_key,
@@ -24,7 +25,18 @@ export default {
         }
       })
         .then((response) => {
-          store.movies = response.data.results;
+          store.moviesSeries = response.data.results;
+        })
+        // Series
+      axios.get(store.config.url_tv, {
+        params: {
+          api_key: store.config.api_key,
+          query: store.searchKey,
+          language: store.config.language
+        }
+      })
+        .then((response) => {
+          store.moviesSeries = response.data.results;
         })
     }
   }

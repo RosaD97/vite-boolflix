@@ -2,7 +2,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
     searchKey: '',
-    movies: [],
+    moviesSeries: [],
     config: {
         api_key: 'b98c0b75b15b633f599dab2c7322d4ca',
         query: '',
