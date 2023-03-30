@@ -33,6 +33,7 @@ export default {
 
 <template>
     <div>
+        <img :src="store.config.url_img+info.poster_path" alt="">
         <h2>{{ info.title }}</h2>
         <h2>{{ info.name }}</h2>
 
@@ -44,7 +45,7 @@ export default {
         <span>{{ getVote }}</span>
 
         <font-awesome-icon v-for="n in getVote" v-show="getVote !== 0" icon="fa-solid fa-star" />
-        <font-awesome-icon v-for="n in 5-getVote" icon="fa-solid fa-user-secret" />
+        <font-awesome-icon v-for="n in 5-getVote" icon="fa-regular fa-star" />
     </div>
 </template>
 
