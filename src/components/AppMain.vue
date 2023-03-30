@@ -11,39 +11,23 @@ export default {
     },
     components: {
         AppCard
-    },
-    methods: {
-        // Add Flags
-        flag(e) {
-            if (e === "en") {
-                return '../public/img/en.png'
-            } else if (e === "it") {
-                return '../public/img/ita.jpg'
-            } else if (e === "es") {
-                return '../public/img/es.webp'
-            } else {
-                return
-            }
-
-        }
     }
 }
 </script>
 
 <template>
     <ul>
-        <li v-for="movie in store.moviesSeries">{{ movie.title }}
-            <div>{{ movie.original_language }}
-                <img :src=flag(movie.original_language)>
-            </div>
-            <span>{{ movie.vote_average }}</span>
+        <!-- Film -->
+        <li v-for="movie in store.movies">
+            <AppCard :info="movie" ></AppCard>
+        </li>
+        <!-- Series -->
+        <li v-for="series in store.series">
+            <AppCard :info="series"></AppCard>
         </li>
     </ul>
-    <AppCard></AppCard>
+    <div v-show="store.searchKey === ''">Fai una nuova ricerca.</div>
 </template>
 
 <style scoped>
-img{
-    width: 20px;
-}
 </style>

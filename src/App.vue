@@ -25,7 +25,7 @@ export default {
         }
       })
         .then((response) => {
-          store.moviesSeries = response.data.results;
+          store.movies = response.data.results;
         })
         // Series
       axios.get(store.config.url_tv, {
@@ -36,7 +36,7 @@ export default {
         }
       })
         .then((response) => {
-          store.moviesSeries = response.data.results;
+          store.series = response.data.results;
         })
     }
   }
