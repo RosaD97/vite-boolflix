@@ -1,0 +1,13 @@
+@use './variables.scss' as *;
+
+// Import all of Bootstrap's CSS
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+   

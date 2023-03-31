@@ -17,7 +17,7 @@ export default {
   methods: {
     search() {
       // Film
-      axios.get(store.config.url_movies, {
+      axios.get(store.config.urlApi + store.config.endpoint_movies, {
         params: {
           api_key: store.config.api_key,
           query: store.searchKey,
@@ -28,7 +28,7 @@ export default {
           store.movies = response.data.results;
         })
         // Series
-      axios.get(store.config.url_tv, {
+      axios.get(store.config.urlApi + store.config.endpoint_tv, {
         params: {
           api_key: store.config.api_key,
           query: store.searchKey,
@@ -44,8 +44,11 @@ export default {
 </script>
 
 <template>
+  <div class="ms_container">
   <AppHeader @search="search"></AppHeader>
   <AppMain></AppMain>
+</div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+</style>

@@ -9,7 +9,8 @@ export const store = reactive({
         api_key: 'b98c0b75b15b633f599dab2c7322d4ca',
         query: '',
         language: 'it-IT',
-        url_movies: 'https://api.themoviedb.org/3/search/movie',
-        url_tv: 'https://api.themoviedb.org/3/search/tv'
+        urlApi: 'https://api.themoviedb.org/3',
+        endpoint_movies: '/search/movie',
+        endpoint_tv: '/search/tv'
     }
 })
