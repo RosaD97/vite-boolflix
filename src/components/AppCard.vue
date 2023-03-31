@@ -83,6 +83,7 @@ img {
 }
 // base
 .flip {
+    cursor: pointer;
     position: relative;
     box-shadow: -1px 0px 19px -2px #000000;
     >.front,
