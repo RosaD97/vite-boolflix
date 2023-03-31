@@ -40,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <div class="flip ms_card position-relative mb-5">
+    <div class="flip position-relative mb-5">
         <img class="front" v-show="info.poster_path !== null" :src="store.config.url_img + info.poster_path" alt="">
         <img class="front ms_imgNotFound" v-show="info.poster_path === null" src="../../public/imgNotFound.jpg">
         <div class="back info p-2">
@@ -51,7 +51,7 @@ export default {
                 <font-awesome-icon class="stars" v-for="n in getVote" v-show="getVote !== 0" icon="fa-solid fa-star" />
                 <font-awesome-icon v-for="n in 5 - getVote" icon="fa-regular fa-star" />
             </div>
-            <div class="mt-3 p-1">{{ info.overview }}</div>
+            <div class="ms_overview mt-3 p-1">{{ info.overview }}</div>
         </div>
     </div>
 </template>
@@ -59,6 +59,11 @@ export default {
 <style lang="scss" scoped>
 .ms_imgNotFound{
     object-fit: cover;
+}
+.ms_overview{
+    width: 400px;
+    height: 400px;
+    overflow-y: auto;
 }
 img {
     width: 400px;
